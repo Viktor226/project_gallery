@@ -50,7 +50,7 @@ st.header("Галерия")
 if st.session_state.animals:
     cols = st.columns(3)
     for idx, animal in enumerate(st.session_state.animals):
-        with cols[idx % 3]:
+        with cols[idx % 4]:
             st.subheader(animal["име"])
             st.image(animal["картинка"], use_column_width=True)
             st.write(animal["описание"])
@@ -59,7 +59,5 @@ else:
     st.info("Галерията е празна. Добавете животни!")
 
 
-# lakomstwo
 
-st.subheader("любимо лакомство")
 
