@@ -54,7 +54,7 @@ if st.session_state.animals:
             st.subheader(animal["име"])
             st.image(animal["картинка"], use_column_width=True)
             st.write(animal["описание"])
-            st.write(animal["lakomstwo"])
+            st.write(animal["лакомство"])
 else:
     st.info("Галерията е празна. Добавете животни!")
 
