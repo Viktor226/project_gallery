@@ -12,6 +12,7 @@ st.header("Добави ново животно")
 name = st.text_input("Име на животното")
 description = st.text_area("Описание")
 image_url = st.text_input("URL на картинка")
+lakomstwo = st.text_input("любимо лакомство")
 
 if st.button("Добави"):
     if name and description and image_url:
@@ -19,6 +20,7 @@ if st.button("Добави"):
             "име": name,
             "описание": description,
             "картинка": image_url
+            "лакомство": lakomstwo
         })
         st.success(f"{name} е добавено!")
         st.rerun()
@@ -52,5 +54,12 @@ if st.session_state.animals:
             st.subheader(animal["име"])
             st.image(animal["картинка"], use_column_width=True)
             st.write(animal["описание"])
+            st.write(animal["lakomstwo"])
 else:
     st.info("Галерията е празна. Добавете животни!")
+
+
+# lakomstwo
+
+st.subheader("любимо лакомство")
+
